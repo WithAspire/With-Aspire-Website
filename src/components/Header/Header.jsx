@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
@@ -9,10 +10,21 @@ import './Header.css'
 import { Link, NavLink } from 'react-router-dom';
 
 export default function Header() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <>
 
-      <header>
+      <header style={{ position: scrollPosition > 150 ? 'fixed' : 'static' }}>
 
         <div className="top-header">
           <div className="container">
