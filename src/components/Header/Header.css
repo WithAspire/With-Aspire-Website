@@ -51,7 +51,7 @@ img {
 }
 
 header .top-header {
-  background: black;
+  background: #141D38;
 }
 header .top-header .inner-grid {
   display: flex;
@@ -64,11 +64,11 @@ header .top-header .inner-grid .social-icons {
 }
 header .top-header .inner-grid .social-icons a {
   padding: 6px 10px;
-  border-left: 1px solid #ffffff;
+  border-left: 1px solid grey;
   display: block;
 }
 header .top-header .inner-grid .social-icons a:nth-last-child(1) {
-  border-right: 1px solid #ffffff;
+  border-right: 1px solid grey;
 }
 header .top-header .inner-grid .contact {
   display: flex;
@@ -81,10 +81,10 @@ header .top-header .inner-grid .contact .block {
   gap: 10px;
   color: grey;
   font-size: 0.85rem;
-  border-left: 1px solid #ffffff;
+  border-left: 1px solid grey;
 }
 header .top-header .inner-grid .contact .block:nth-last-child(1) {
-  border-right: 1px solid #ffffff;
+  border-right: 1px solid grey;
 }
 header .bottom-header {
   padding: 10px 0;
@@ -99,12 +99,11 @@ header .bottom-header .inner-grid {
 header .bottom-header .inner-grid .link-block {
   display: flex;
   justify-content: flex-end;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
 }
 header .bottom-header .inner-grid .link-block .link-item {
-  color: black;
-  font-size: 0.9rem;
+  color: #141D38;
   font-weight: bold;
   position: relative;
   cursor: pointer;
@@ -159,14 +158,13 @@ header .bottom-header .inner-grid .link-block .drop-block .drop-list {
   width: -moz-max-content;
   width: max-content;
   top: calc(100% + 15px);
-  left: 0;
-  transform: translate(0, 20%);
+  left: 50%;
+  transform: translate(-50%, 20%);
   transition: all 0.3s linear;
 }
 header .bottom-header .inner-grid .link-block .drop-block .drop-list a {
   color: black;
-  font-size: 0.85rem;
-  padding: 4px 10px;
+  padding: 5px 20px;
 }
 header .bottom-header .inner-grid .link-block .drop-block .drop-list a:hover {
   background: #002b8638;
@@ -176,5 +174,5 @@ header .bottom-header .inner-grid .link-block .drop-block:hover .drop-list {
   display: grid;
   opacity: 1;
   z-index: 2;
-  transform: translate(0, 0);
+  transform: translate(-50%, 0);
 }/*# sourceMappingURL=Header.css.map */
