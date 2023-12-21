@@ -1,0 +1,53 @@
+@import "./Global";
+//! ==================================================================
+//! DEFAULT SCSS
+//! ==================================================================
+* {
+    font-family: $themeFont;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: $white;
+    text-decoration: none;
+    transition: all 0.3s linear;
+    &:hover {
+        color: $themeColor2;
+    }
+}
+
+input,
+select,
+textarea,
+input:focus,
+select:focus,
+textarea:focus,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    border: 0;
+    outline: 0;
+    padding: 0;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    transition: all 0.3s linear;
+}
+
+img {
+    width: 100%;
+}
+
+::selection {
+    background: $themeColor1;
+    color: $white;
+}
+
+//! ==================================================================
+//! BUTTON SCSS
+//! ==================================================================

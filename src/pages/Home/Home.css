@@ -1,0 +1,9 @@
+#image-carousel .swiper-wrapper {
+  height: calc(100vh - 120px);
+}
+#image-carousel .swiper-wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}/*# sourceMappingURL=Home.css.map */

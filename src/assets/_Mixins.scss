@@ -1,0 +1,19 @@
+@mixin border-radius($value) {
+  -moz-border-radius: $value;
+  -webkit-border-radius: $value;
+  -khtml-border-radius: $value;
+  border-radius: $value;
+}
+
+@mixin transform($value) {
+  -webkit-transform: $value;
+  -ms-transform: $value;
+  -moz-transform: $value;
+  transform: $value;
+}
+
+@mixin grid($col, $align: center) {
+  display: grid;
+  grid-template-columns: $col;
+  align-items: $align;
+}

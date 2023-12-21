@@ -1,0 +1,138 @@
+@import "../../assets/Default";
+@import "../../assets/Mixins";
+
+header {
+    //! ==================================================================
+    //! TOP HEADER
+    //! ==================================================================
+    .top-header {
+        background: $black;
+        .inner-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            .social-icons {
+                display: flex;
+                a {
+                    padding: 6px 10px;
+                    border-left: 1px solid $white;
+                    display: block;
+                    &:nth-last-child(1) {
+                        border-right: 1px solid $white;
+                    }
+                }
+            }
+            .contact {
+                display: flex;
+                align-items: center;
+                .block {
+                    display: flex;
+                    padding: 6px 10px;
+                    align-items: center;
+                    gap: 10px;
+                    color: $grey;
+                    font-size: 0.85rem;
+                    border-left: 1px solid $white;
+                    &:nth-last-child(1) {
+                        border-right: 1px solid $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom-header {
+        padding: 10px 0;
+        border-bottom: 1px solid grey;
+        background: white;
+        .inner-grid {
+            @include grid(unquote("200px 1fr"));
+            .link-block {
+                display: flex;
+                justify-content: flex-end;
+                gap: 20px;
+                align-items: center;
+                .link-item {
+                    color: $black;
+                    font-size: 0.9rem;
+                    font-weight: bold;
+                    position: relative;
+                    cursor: pointer;
+                    &::after {
+                        content: "";
+                        width: 0%;
+                        position: absolute;
+                        bottom: -8px;
+                        height: 2px;
+                        background: $themeColor2;
+                        left: 0;
+                        transition: all 0.3s linear;
+                    }
+                    &:hover {
+                        color: $themeColor2;
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                    &.active {
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+                .drop-block {
+                    position: relative;
+                    .link-item {
+                        display: flex;
+                        gap: 5px;
+                        align-items: center;
+                        &::before {
+                            content: "";
+                            top: 100%;
+                            width: 100%;
+                            background: transparent;
+                            height: 15px;
+                            z-index: 1;
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                        }
+                    }
+                    .drop-list {
+                        position: absolute;
+                        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                        opacity: 0;
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        z-index: -2;
+                        background: white;
+                        min-width: 150px;
+                        width: max-content;
+                        top: calc(100% + 15px);
+                        left: 0;
+                        transform: translate(0, 20%);
+                        transition: all 0.3s linear;
+                        a {
+                            color: black;
+                            font-size: 0.85rem;
+                            padding: 4px 10px;
+                            &:hover {
+                                background: unquote($themeColor1 + "38");
+                                color: $themeColor1;
+                            }
+                        }
+                    }
+                    &:hover {
+                        .drop-list {
+                            display: grid;
+                            opacity: 1;
+                            z-index: 2;
+                            transform: translate(0, 0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 

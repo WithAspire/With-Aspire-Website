@@ -1,0 +1,12 @@
+//! ==================================================================
+//! IMAGE CAROUSEL
+//! ==================================================================
+#image-carousel {
+    .swiper-wrapper {
+        height: calc(100vh - 120px);
+        img {
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
+* {
+  font-family: "Figtree", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+a:hover {
+  color: #0c9ff2;
+}
+
+input,
+select,
+textarea,
+input:focus,
+select:focus,
+textarea:focus,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  border: 0;
+  outline: 0;
+  padding: 0;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  transition: all 0.3s linear;
+}
+
+img {
+  width: 100%;
+}
+
+::-moz-selection {
+  background: #002b86;
+  color: #ffffff;
+}
+
+::selection {
+  background: #002b86;
+  color: #ffffff;
+}
+
+header .top-header {
+  background: black;
+}
+header .top-header .inner-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+header .top-header .inner-grid .social-icons {
+  display: flex;
+}
+header .top-header .inner-grid .social-icons a {
+  padding: 6px 10px;
+  border-left: 1px solid #ffffff;
+  display: block;
+}
+header .top-header .inner-grid .social-icons a:nth-last-child(1) {
+  border-right: 1px solid #ffffff;
+}
+header .top-header .inner-grid .contact {
+  display: flex;
+  align-items: center;
+}
+header .top-header .inner-grid .contact .block {
+  display: flex;
+  padding: 6px 10px;
+  align-items: center;
+  gap: 10px;
+  color: grey;
+  font-size: 0.85rem;
+  border-left: 1px solid #ffffff;
+}
+header .top-header .inner-grid .contact .block:nth-last-child(1) {
+  border-right: 1px solid #ffffff;
+}
+header .bottom-header {
+  padding: 10px 0;
+  border-bottom: 1px solid grey;
+  background: white;
+}
+header .bottom-header .inner-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+}
+header .bottom-header .inner-grid .link-block {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  align-items: center;
+}
+header .bottom-header .inner-grid .link-block .link-item {
+  color: black;
+  font-size: 0.9rem;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+}
+header .bottom-header .inner-grid .link-block .link-item::after {
+  content: "";
+  width: 0%;
+  position: absolute;
+  bottom: -8px;
+  height: 2px;
+  background: #0c9ff2;
+  left: 0;
+  transition: all 0.3s linear;
+}
+header .bottom-header .inner-grid .link-block .link-item:hover {
+  color: #0c9ff2;
+}
+header .bottom-header .inner-grid .link-block .link-item:hover::after {
+  width: 100%;
+}
+header .bottom-header .inner-grid .link-block .link-item.active::after {
+  width: 100%;
+}
+header .bottom-header .inner-grid .link-block .drop-block {
+  position: relative;
+}
+header .bottom-header .inner-grid .link-block .drop-block .link-item {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+header .bottom-header .inner-grid .link-block .drop-block .link-item::before {
+  content: "";
+  top: 100%;
+  width: 100%;
+  background: transparent;
+  height: 15px;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+header .bottom-header .inner-grid .link-block .drop-block .drop-list {
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  opacity: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: -2;
+  background: white;
+  min-width: 150px;
+  width: -moz-max-content;
+  width: max-content;
+  top: calc(100% + 15px);
+  left: 0;
+  transform: translate(0, 20%);
+  transition: all 0.3s linear;
+}
+header .bottom-header .inner-grid .link-block .drop-block .drop-list a {
+  color: black;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+}
+header .bottom-header .inner-grid .link-block .drop-block .drop-list a:hover {
+  background: #002b8638;
+  color: #002b86;
+}
+header .bottom-header .inner-grid .link-block .drop-block:hover .drop-list {
+  display: grid;
+  opacity: 1;
+  z-index: 2;
+  transform: translate(0, 0);
+}/*# sourceMappingURL=Header.css.map */
