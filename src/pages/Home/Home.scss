@@ -3,10 +3,23 @@
 //! ==================================================================
 #image-carousel {
     .swiper-wrapper {
-        height: calc(100vh - 120px);
+        height: calc(100vh);
+
         img {
             object-fit: cover;
             object-position: center;
         }
     }
 }
+
+// .companies {
+//     height: 150px;
+//     background-color: #f8f8f8;
+
+//     .companies>.icon_container {
+//         margin: auto;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-around;
+//     }
+// }
