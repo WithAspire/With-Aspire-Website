@@ -1,6 +1,6 @@
 import { ArrowUpRight, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react'
-import './Footer.css'
 import { Link } from 'react-router-dom'
+import './Footer.css'
 
 export default function Footer() {
     return (
@@ -18,9 +18,9 @@ export default function Footer() {
                             <div className="main-text">
                                 <div>Contact Us</div>
                             </div>
-                            <div className="redirect">
+                            <Link to="/contact" className="redirect">
                                 <ArrowUpRight />
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

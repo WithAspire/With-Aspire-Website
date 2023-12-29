@@ -71,11 +71,11 @@ header .top-header .inner-grid .social-icons {
 }
 header .top-header .inner-grid .social-icons a {
   padding: 6px 10px;
-  border-left: 1px solid grey;
+  border-left: 1px solid #808080;
   display: block;
 }
 header .top-header .inner-grid .social-icons a:nth-last-child(1) {
-  border-right: 1px solid grey;
+  border-right: 1px solid #808080;
 }
 header .top-header .inner-grid .contact {
   display: flex;
@@ -86,12 +86,12 @@ header .top-header .inner-grid .contact .block {
   padding: 6px 10px;
   align-items: center;
   gap: 10px;
-  color: grey;
+  color: #808080;
   font-size: 0.85rem;
-  border-left: 1px solid grey;
+  border-left: 1px solid #808080;
 }
 header .top-header .inner-grid .contact .block:nth-last-child(1) {
-  border-right: 1px solid grey;
+  border-right: 1px solid #808080;
 }
 header .bottom-header {
   padding: 10px 0;

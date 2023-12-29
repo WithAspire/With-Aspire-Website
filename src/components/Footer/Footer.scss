@@ -36,6 +36,10 @@ footer {
                 @include grid();
                 gap: 20px;
                 place-items: center;
+                &:hover {
+                    transform: rotate(45deg);
+                    color: white;
+                }
             }
         }
     }

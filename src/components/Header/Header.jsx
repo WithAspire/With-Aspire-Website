@@ -65,7 +65,7 @@ export default function Header() {
                     <div><ChevronDown size={15} /></div>
                   </div>
                   <div className="drop-list">
-                    <NavLink to="/about-us">About Us</NavLink>
+                    <NavLink to="/about">About Us</NavLink>
                     <NavLink to="/why-choose-us">Why Choose Us</NavLink>
                     <NavLink to="/career">Careers</NavLink>
                     <NavLink to="/our-team">Our Team</NavLink>

@@ -88,6 +88,10 @@ footer .top-footer .inner-grid .redirect {
   gap: 20px;
   place-items: center;
 }
+footer .top-footer .inner-grid .redirect:hover {
+  transform: rotate(45deg);
+  color: white;
+}
 footer .bottom-footer {
   background: #141D38;
   padding: 50px 0 40px;
