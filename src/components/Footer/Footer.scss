@@ -1,0 +1,111 @@
+@import "../../assets/Default";
+@import "../../assets/Mixins";
+
+footer {
+    //! ==================================================================
+    //! TOP FOOTER
+    //! ==================================================================
+    .top-footer {
+        padding: 40px 0;
+        .inner-grid {
+            @include grid(unquote("150px 1fr 50px"));
+            .text {
+                font-size: 1.2rem;
+            }
+            .main-text {
+                font-size: 5rem;
+                padding-left: 50px;
+                div {
+                    position: relative;
+                    display: inline-block;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 10px;
+                        height: 3px;
+                        background: $themeColor2;
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+            }
+            .redirect {
+                background: $themeColor2;
+                aspect-ratio: 1/1;
+                @include border-radius(50%);
+                @include grid();
+                gap: 20px;
+                place-items: center;
+            }
+        }
+    }
+    
+    //! ==================================================================
+    //! BOTTOM FOOTER
+    //! ==================================================================
+    .bottom-footer {
+        background: $black;
+        padding: 50px 0 40px;
+        border-bottom: 1px solid $white;
+        .inner-grid {
+            @include grid(unquote("1.5fr 1fr 200px 1fr"), baseline);
+            gap: 30px;
+            .head {
+                font-weight: bold;
+                color: white;
+                margin-bottom: 20px;
+                div {
+                    position: relative;
+                    display: inline-block;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -5px;
+                        height: 2px;
+                        background: $white;
+                        width: 60%;
+                        left: 0;
+                    }
+                }
+            }
+            .text {
+                color: #d6d6d6;
+                font-size: 0.9rem;
+            }
+            .links {
+                @include grid();
+                a {
+                    color: #d6d6d6;
+                    &:hover {
+                        color: $themeColor2;
+                    }
+                }
+            }
+            .social {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                a {
+                    background: unquote($white + "3d");
+                    width: 40px;
+                    display: block;
+                    height: 40px;
+                    @include border-radius(50%);
+                    @include grid();
+                    place-items: center;
+                }
+            }
+        }
+    }
+    
+    //! ==================================================================
+    //! COPYRIGHT
+    //! ==================================================================
+    .copyright {
+        text-align: center;
+        padding: 10px;
+        font-size: 0.9rem;
+        background: $black;
+        color: $white;
+    }
+}

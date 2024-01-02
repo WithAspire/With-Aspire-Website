@@ -1,18 +1,30 @@
+import { useEffect, useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { ChevronDown, Facebook, Instagram, Linkedin, Mails, Phone } from 'lucide-react'
+import { ChevronDown, Facebook, Instagram, Linkedin, Mails, Phone, Twitter } from 'lucide-react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './Header.css'
 import { Link, NavLink } from 'react-router-dom';
 
 export default function Header() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <>
 
-      <header>
+      <header style={{ position: scrollPosition > 150 ? 'fixed' : 'static' }}>
 
         <div className="top-header">
           <div className="container">
@@ -21,6 +33,7 @@ export default function Header() {
                 <a href="#"><Facebook size={15} /></a>
                 <a href="#"><Instagram size={15} /></a>
                 <a href="#"><Linkedin size={15} /></a>
+                <a href="#"><Twitter size={15} /></a>
               </div>
               <div className="contact">
                 <div className="block">
@@ -46,20 +59,43 @@ export default function Header() {
               </div>
               <div className="link-block">
                 <NavLink className="link-item" to="/">Home</NavLink>
-                <NavLink className="link-item" to="/about">About</NavLink>
+                <div className="drop-block">
+                  <div className="link-item">
+                    <div>Company</div>
+                    <div><ChevronDown size={15} /></div>
+                  </div>
+                  <div className="drop-list">
+                    <NavLink to="/about-us">About Us</NavLink>
+                    <NavLink to="/why-choose-us">Why Choose Us</NavLink>
+                    <NavLink to="/career">Careers</NavLink>
+                    <NavLink to="/our-team">Our Team</NavLink>
+                    <NavLink to="/faq">FAQ</NavLink>
+                  </div>
+                </div>
+                <NavLink className="link-item" to="/insight">Insights</NavLink>
                 <div className="drop-block">
                   <div className="link-item">
                     <div>Services</div>
                     <div><ChevronDown size={15} /></div>
                   </div>
                   <div className="drop-list">
-                    <NavLink to="/service">Service</NavLink>
-                    <NavLink to="/service">Service</NavLink>
-                    <NavLink to="/service">Service</NavLink>
-                    <NavLink to="/service">Service</NavLink>
+                    <NavLink to="/it-services">IT Services</NavLink>
+                    <NavLink to="/web-development">Web Development</NavLink>
+                    <NavLink to="/app-development">App Development</NavLink>
+                    <NavLink to="/consultancy">Consultancy</NavLink>
                   </div>
                 </div>
-                <NavLink className="link-item" to="/contact">Contact</NavLink>
+                <div className="drop-block">
+                  <div className="link-item">
+                    <div>Products</div>
+                    <div><ChevronDown size={15} /></div>
+                  </div>
+                  <div className="drop-list">
+                    <NavLink to="/employee-management">Employee Management System</NavLink>
+                    <NavLink to="/human-resource-management">Human Resource Management System</NavLink>
+                  </div>
+                </div>
+                <NavLink className="link-item" to="/contact">Contact Us</NavLink>
               </div>
             </div>
           </div>

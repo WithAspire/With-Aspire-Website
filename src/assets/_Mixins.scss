@@ -12,7 +12,7 @@
   transform: $value;
 }
 
-@mixin grid($col, $align: center) {
+@mixin grid($col: 1fr, $align: center) {
   display: grid;
   grid-template-columns: $col;
   align-items: $align;

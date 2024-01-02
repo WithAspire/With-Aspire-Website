@@ -1,0 +1,37 @@
+@import "../../assets/Default";
+@import "../../assets/Mixins";
+
+//! ==================================================================
+//! FIXED SIDE
+//! ==================================================================
+#fixed-side {
+    position: fixed;
+    top: 20%;
+    right: 0;
+    z-index: 10;
+    .block {
+        @include grid(40px 200px, normal);
+        background: #7ac7c4;
+        transform: translate(200px, 0);
+        transition: all 0.3s linear;
+        cursor: pointer;
+        &:nth-child(2) {
+            background: #c4edde;
+        }
+        .icon {
+            aspect-ratio: 1/1;
+            @include grid();
+            place-items: center;
+        }
+        .text {
+            padding: 3px 10px;
+            align-items: center;
+            display: flex;
+            background: #00000024;
+            font-size: 0.9rem;
+        }
+        &:hover {
+            transform: translate(0, 0);
+        }
+    }
+}

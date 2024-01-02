@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
+* {
+  font-family: "Figtree", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+a:hover {
+  color: #0c9ff2;
+}
+
+input,
+select,
+textarea,
+input:focus,
+select:focus,
+textarea:focus,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  border: 0;
+  outline: 0;
+  padding: 0;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  transition: all 0.3s linear;
+}
+
+img {
+  width: 100%;
+}
+
+::-moz-selection {
+  background: #002b86;
+  color: #ffffff;
+}
+
+::selection {
+  background: #002b86;
+  color: #ffffff;
+}
+
+#fixed-side {
+  position: fixed;
+  top: 20%;
+  right: 0;
+  z-index: 10;
+}
+#fixed-side .block {
+  display: grid;
+  grid-template-columns: 40px 200px;
+  align-items: normal;
+  background: #7ac7c4;
+  transform: translate(200px, 0);
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+#fixed-side .block:nth-child(2) {
+  background: #c4edde;
+}
+#fixed-side .block .icon {
+  aspect-ratio: 1/1;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  place-items: center;
+}
+#fixed-side .block .text {
+  padding: 3px 10px;
+  align-items: center;
+  display: flex;
+  background: rgba(0, 0, 0, 0.1411764706);
+  font-size: 0.9rem;
+}
+#fixed-side .block:hover {
+  transform: translate(0, 0);
+}/*# sourceMappingURL=FixedSide.css.map */

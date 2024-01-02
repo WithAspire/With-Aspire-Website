@@ -1,1 +1,157 @@
-/*# sourceMappingURL=Footer.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
+* {
+  font-family: "Figtree", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+a:hover {
+  color: #0c9ff2;
+}
+
+input,
+select,
+textarea,
+input:focus,
+select:focus,
+textarea:focus,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  border: 0;
+  outline: 0;
+  padding: 0;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  transition: all 0.3s linear;
+}
+
+img {
+  width: 100%;
+}
+
+::-moz-selection {
+  background: #002b86;
+  color: #ffffff;
+}
+
+::selection {
+  background: #002b86;
+  color: #ffffff;
+}
+
+footer .top-footer {
+  padding: 40px 0;
+}
+footer .top-footer .inner-grid {
+  display: grid;
+  grid-template-columns: 150px 1fr 50px;
+  align-items: center;
+}
+footer .top-footer .inner-grid .text {
+  font-size: 1.2rem;
+}
+footer .top-footer .inner-grid .main-text {
+  font-size: 5rem;
+  padding-left: 50px;
+}
+footer .top-footer .inner-grid .main-text div {
+  position: relative;
+  display: inline-block;
+}
+footer .top-footer .inner-grid .main-text div::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  height: 3px;
+  background: #0c9ff2;
+  width: 100%;
+  left: 0;
+}
+footer .top-footer .inner-grid .redirect {
+  background: #0c9ff2;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 20px;
+  place-items: center;
+}
+footer .bottom-footer {
+  background: #141D38;
+  padding: 50px 0 40px;
+  border-bottom: 1px solid #ffffff;
+}
+footer .bottom-footer .inner-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 200px 1fr;
+  align-items: baseline;
+  gap: 30px;
+}
+footer .bottom-footer .inner-grid .head {
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+footer .bottom-footer .inner-grid .head div {
+  position: relative;
+  display: inline-block;
+}
+footer .bottom-footer .inner-grid .head div::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  background: #ffffff;
+  width: 60%;
+  left: 0;
+}
+footer .bottom-footer .inner-grid .text {
+  color: #d6d6d6;
+  font-size: 0.9rem;
+}
+footer .bottom-footer .inner-grid .links {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+footer .bottom-footer .inner-grid .links a {
+  color: #d6d6d6;
+}
+footer .bottom-footer .inner-grid .links a:hover {
+  color: #0c9ff2;
+}
+footer .bottom-footer .inner-grid .social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+footer .bottom-footer .inner-grid .social a {
+  background: #ffffff3d;
+  width: 40px;
+  display: block;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  place-items: center;
+}
+footer .copyright {
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  background: #141D38;
+  color: #ffffff;
+}/*# sourceMappingURL=Footer.css.map */
